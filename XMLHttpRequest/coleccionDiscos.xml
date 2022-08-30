@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CATALOG>
+<CD>
+<TITLE>Empire Burlesque</TITLE>
+<ARTIST>Bob Dylan</ARTIST>
+<PRICE>8.0</PRICE>
+<YEAR>1985</YEAR>
+</CD>
+<CD>
+<TITLE>Hide your heart</TITLE>
+<ARTIST>Bonnie Tyler</ARTIST>
+<PRICE>7.6</PRICE>
+<YEAR>1988</YEAR>
+</CD>
+<CD>
+<TITLE>Stille got the blues</TITLE>
+<ARTIST>Gary Moore</ARTIST>
+<PRICE>7.3</PRICE>
+<YEAR>1990</YEAR>
+</CD>
+<CD>
+<TITLE>One night only</TITLE>
+<ARTIST>Bee Gees</ARTIST>
+<PRICE>11.0</PRICE>
+<YEAR>1998</YEAR>
+</CD>
+</CATALOG>

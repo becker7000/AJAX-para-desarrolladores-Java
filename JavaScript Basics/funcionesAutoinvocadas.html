@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Función autoinvocada</title>
+</head>
+<body>
+
+    <h2 id="titulo">Función autoinvocada</h2>
+    <button onclick="detenerEfecto()">Detente</button>
+    
+    <script>
+        (function(){
+            document.write("<br> Hola a todos desde una función autoinvocada");
+        })();
+
+        let intervalo;  
+        (function(){
+            intervalo=setInterval(parpadear,800);
+        })();
+
+        function parpadear(){
+            let titulo = document.getElementById("titulo");
+            titulo.style.color= 
+            (titulo.style.color=='darkred')? 
+            'darkgreen' : 'darkred';
+        }
+
+        function detenerEfecto(){
+            clearInterval(intervalo);
+        }
+
+    </script>
+    
+</body>
+</html>

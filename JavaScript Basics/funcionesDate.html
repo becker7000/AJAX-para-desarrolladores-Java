@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones para fecha</title>
+</head>
+<body>
+    
+    <pre>
+    <h2>Fecha</h2>
+    <script>
+        const fecha = new Date();
+        document.write("<br> Año: "+fecha.getFullYear());
+
+        (function(){
+            let diaDeLaSemana=fecha.getDay();
+            let diaTexto="";
+            switch(diaDeLaSemana){
+                case 0:
+                    diaTexto="domingo";
+                    break;
+                case 1:
+                    diaTexto="lunes";
+                    break;
+                case 2: 
+                    diaTexto="martes";
+                    break;        
+                case 3: 
+                    diaTexto="miércoles";
+                    break;
+                case 4: 
+                    diaTexto="jueves";
+                    break;
+                case 5: 
+                    diaTexto="viernes";
+                    break;
+                case 6: 
+                    diaTexto="Sábado";
+                    break;    
+            }
+            document.write("<br> Excelente "+diaTexto+" para tí!");
+        })();
+            
+    </script>
+
+</body>
+</html>

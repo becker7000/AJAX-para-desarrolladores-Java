@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Descuento</title>
+</head>
+<body>
+
+    <h2>Descuento</h2>
+
+    <em id="mostrar"></em>
+
+    <script>
+
+        function descuento(monto){
+            let montoFinal;
+            montoFinal = (monto>1000)? monto*0.93 : monto;
+            return montoFinal;
+        }
+
+        let elemento = document.getElementById("mostrar");
+        let montoSinDesc=prompt("Escribe un monto: ");
+
+        elemento.innerHTML="El monto a pagar es: $"
+        +descuento(montoSinDesc);
+
+
+    </script>
+
+</body>
+</html>

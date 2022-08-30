@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+    <!-- para duplicar una línea:
+         alt + shift + abajo 
+    -->
+    <pre>
+    <div id="coleccion">
+        <h1>Mi coleccion de discos CD's</h1>
+        <p>AJAX con XMLHttpRequest</p>
+        <button onclick="cargarColeccion()">Ver colección</button>
+    </div>
+
+    <div id="contenedor">
+        <em id="mostrar"></em>
+    </div>
+
+    <script>
+
+        function cargarColeccion(){
+            let coleccion = document.getElementById("contenedor");
+            let solicitud = new XMLHttpRequest;
+            solicitud.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    let artistas,i,texto;
+                    texto="<br>";
+
+                    //Esta línea de código guarda un arreglo
+                    //de todos los artistas: 
+                    artistas=solicitud.responseXML.getElementsByTagName("ARTIST");
+                    console.log(artistas);
+
+                    for(i=0; i<artistas.length;i++){
+                        texto+="<br> "+artistas[i].childNodes[0].nodeValue;
+                    }
+
+                    document.getElementById("mostrar").innerHTML=texto;
+                }
+            };
+            solicitud.open("get","coleccionDiscos.xml",true);
+            solicitud.send();
+
+            if(coleccion.style.display=="none"){
+                coleccion.style.display="block";
+            }else{
+                coleccion.style.display="none";
+            }
+        } // Recomendaciones: clean code y pragmatic programmer 
+       
+
+    </script>
+    
+</body>
+</html>

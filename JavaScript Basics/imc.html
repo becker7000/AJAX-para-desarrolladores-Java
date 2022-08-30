@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMC</title>
+</head>
+<body>
+
+    <h2>Índice de masa corporal</h2>
+    <p id="mostrar"></p>
+
+    <script>
+
+        function imc(masa,estatura){
+            return (masa/estatura**2);
+        }
+
+        let elemento = document.getElementById("mostrar");
+        let masa = prompt("Escribe tu peso (kg): ");
+        let estatura = prompt("Escribe tu estatura (m): ");
+
+        // Propiedad innerHTML nos ayuda a poner algo dentro
+        // del elemento con el id mostrar
+        elemento.innerHTML="Tu índice de masa corporal es: "+
+                            imc(masa,estatura);
+
+    </script>
+
+</body>
+</html>
